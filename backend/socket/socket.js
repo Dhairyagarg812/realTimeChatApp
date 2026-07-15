@@ -5,7 +5,7 @@ const server=http.createServer(app)
 const {Server}=require("socket.io")
 const io=new Server(server,{
     cors:{
-        origin:"http://localhost:5173"
+        origin:"https://realtimechatapp-frontend-42ta.onrender.com"
     }
 })
 const userSocketMap={}

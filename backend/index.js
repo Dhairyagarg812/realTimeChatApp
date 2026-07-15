@@ -12,7 +12,7 @@ const messageRouter = require("./routes/messageRouter");
 
 
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: "https://realtimechatapp-frontend-42ta.onrender.com",
     credentials: true
 }
 ))

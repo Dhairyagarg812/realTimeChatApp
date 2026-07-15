@@ -1,2 +1,2 @@
-const serverUrl="http://localhost:8000"
+const serverUrl="https://realtimechatapp-fmgl.onrender.com"
 export default serverUrl;

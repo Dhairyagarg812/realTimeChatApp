@@ -57,7 +57,7 @@ const MessageArea = () => {
       
     })
     return ()=>socket.off("newMessage")
-  },[messages,setMesseges])
+  },[socket,messages,setMesseges,dispatch])
   return (
     
     <div

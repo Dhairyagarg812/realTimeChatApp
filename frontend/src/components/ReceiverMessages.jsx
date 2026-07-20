@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import dp from "../assets/dp.webp"
 const ReceiverMessages = ({ image, message }) => {
   let scroll = useRef();
-  let dispatch=useD
+  let dispatch=useDispatch
   let{userData,selectedUser}=useSelector((state)=>state.user)
   useEffect(() => {
     scroll.current.scrollIntoView({ behaviour: "smooth" })

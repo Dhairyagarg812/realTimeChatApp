@@ -126,7 +126,7 @@ const SideBar = () => {
               "
             >
               <div className="[scrollbar-width:none]
-          [&::-webkit-scrollbar]:hidden overflow-x-auto p-4">
+          [&::-webkit-scrollbar]:hidden flex gap-2 overflow-x-auto p-4">
                 {otherUsers?.map((user) => (
                   onlineUsers?.includes(user?._id) &&
                   <div className=" relative">

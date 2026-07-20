@@ -3,6 +3,7 @@ import dp from "../assets/dp.webp"
 import { useSelector } from 'react-redux';
 const SenderMessages = ({ image, message }) => {
     let scroll = useRef();
+    let {userData}=useSelector((state)=>state.user)
     let {selectedUser}=useSelector((state)=>state.user)
     useEffect(() => {
         scroll.current.scrollIntoView({ behaviour: "smooth" })
@@ -25,7 +26,7 @@ const SenderMessages = ({ image, message }) => {
             "
         >
           <img
-              src={selectedUser?.image || dp}
+              src={ userData.image || dp}
               
               className="
                 h-[40px] w-[40px] rounded-full object-cover

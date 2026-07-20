@@ -3,7 +3,8 @@ import { useSelector } from 'react-redux';
 import dp from "../assets/dp.webp"
 const ReceiverMessages = ({ image, message }) => {
   let scroll = useRef();
-  let{userData}=useSelector((state)=>state.user)
+  let dispatch=useD
+  let{userData,selectedUser}=useSelector((state)=>state.user)
   useEffect(() => {
     scroll.current.scrollIntoView({ behaviour: "smooth" })
 
@@ -13,14 +14,14 @@ const ReceiverMessages = ({ image, message }) => {
     <div ref={scroll} className="flex justify-start">
       <div className='flex'>
       <div
-          key={userData._id}
+          key={selectedUser._id}
           onClick={() => dispatch(setSelectedUser(user))}
           className="
               flex p-3 pt-4
             "
         >
           <img
-              src={userData?.image || dp}
+              src={selectedUser?.image || dp}
               
               className="
                 h-[40px] w-[40px] rounded-full object-cover
